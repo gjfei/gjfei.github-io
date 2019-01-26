@@ -148,6 +148,7 @@
       labels: {{ theme.algolia_search.labels | json_encode }}
     }
   };
+  
 </script>
 
 {# Canonical, good for google search engine (SEO) : https://support.google.com/webmasters/answer/139066 #}

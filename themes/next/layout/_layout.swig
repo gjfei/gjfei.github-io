@@ -20,7 +20,7 @@
   {% endif %}
 
   <div class="{{ container_class }} {% block page_class %}{% endblock %}">
-    <div class="headband"></div>
+
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
       <div class="header-inner"> {%- include '_partials/header.swig' %} </div>
@@ -88,5 +88,6 @@
   {% include '_third-party/mathjax.swig' %}
   {% include '_third-party/scroll-cookie.swig' %}
   {% include '_third-party/exturl.swig' %}
+  <script type="text/javascript" src="/js/src/menu.js"></script>
 </body>
 </html>

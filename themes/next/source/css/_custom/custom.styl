@@ -1,1 +1,72 @@
 // Custom styles.
+//站名，菜单部分取消上下内边距
+.header-inner {
+    padding: 0px;
+}
+//文章标题添加下边距
+.use-motion .post-header {
+    padding-bottom: 15px;
+}
+//菜单字体大小
+.menu .menu-item a {
+    font-size: 16px;
+}
+.posts-expand .post-title-link::before {
+    background-image: linear-gradient(90deg, #a166ab 0%, #ef4e7b 25%, #f37055 50%, #ef4e7b 75%, #a166ab 100%);
+}
+.posts-expand .post-meta {
+    margin-bottom: 10px;
+}
+//导航栏和博文页与js互动的标题样式
+.post-header-a {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left:0;
+    background-color: #FFFFFF;
+    box-shadow: 0 1px 10px #E5E5E5;
+    width: 100%;    
+}
+//主体页面版心宽度调整（）原始的为700px）
+.main-inner {
+    margin: 0 auto;
+    width: 800px;
+}
+// 首页导航栏较高（以为懒得修改了）
+.about {
+    width:750px;
+    height: 100%;
+    margin: auto;
+}
+.userbox {
+    float: left;
+    margin: 5px;
+    width: 238px;
+    height: 47px;
+}
+.userbox table {
+    border: 0;
+    border-collapse: collapse;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.userbox table tbody tr td img {
+    vertical-align: bottom;
+}
+.userbox table tbody tr td.icon,
+.userbox table tbody tr td.iconr {
+    border: 0;
+    text-align: center;
+    font-size: 11pt;
+    font-weight: bold;
+    padding: 0 1px 0 1px;
+    line-height: 1em;
+    vertical-align: middle;
+}
+.userbox table tbody tr td.disc {
+    border: 0;
+    text-align: left;
+    padding: 0 4px 0 4px;
+    line-height: 1.25em;
+    vertical-align: middle;
+}

@@ -9,13 +9,6 @@
       </div>
     {% endif %}
 
-    <div class="custom-logo-site-title">
-      <a href="{{ config.root }}"  class="brand" rel="start">
-        <span class="logo-line-before"><i></i></span>
-        <span class="site-title">{{ config.title }}</span>
-        <span class="logo-line-after"><i></i></span>
-      </a>
-    </div>
       {% if theme.seo %}
         <h1 class="site-subtitle" itemprop="description">{{ config.subtitle }}</h1>
       {% else %}
