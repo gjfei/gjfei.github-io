@@ -1,36 +1,27 @@
-# 使用语言
-language: node_js
-# node版本
-node_js: stable
-# 设置只监听哪个分支
-branches:
-  only:
-  - source
-# 缓存，可以节省集成的时间，这里我用了yarn，如果不用可以删除
-cache:
-  apt: true
-  yarn: true
-  directories:
-    - node_modules
-# tarvis生命周期执行顺序详见官网文档
-before_install:
-- git config --global user.name "gjfei"
-- git config --global user.email "1491180173@qq.com"
-# 由于使用了yarn，所以需要下载，如不用yarn这两行可以删除
-# - curl -o- -L https://yarnpkg.com/install.sh | bash
-# - export PATH=$HOME/.yarn/bin:$PATH
-- npm install -g hexo-cli
+language: node_js # 设置语言
+
+node_js: 10.15.0 # 设置相应版本
+
 install:
-# 不用yarn的话这里改成 npm i 即可
-- npm i
+    - npm install # 安装hexo及插件
+
 script:
-- hexo clean
-- hexo generate
-after_success:
-- cd ./public
-- git init
-- git add --all .
-- git commit -m "Travis CI Auto Builder"
-# 这里的 REPO_TOKEN 即之前在 travis 项目的环境变量里添加的
-- git push --quiet --force https://$blog@github.com/gjfei/gjfei.github.io.git
-  master
+    - hexo clean # 清除
+    - hexo g # 生成
+
+after_script:
+    - cd ./public
+    - git init
+    - git config user.name "gjfei" # 修改name
+    - git config user.email "149118017.@qq.com" # 修改email
+    - git add .
+    - git commit -m "Travis CI Auto Builder"
+    - git push --force --quiet "https://${GH_TOKEN}@${blog}" master:master # GH_TOKEN是在Travis中配置token的名称
+
+branches:
+    only:
+        - hexo #只监测hexo分支，hexo是我的分支的名称，可根据自己情况设置
+
+env:
+    global:
+        - GH_REF: github.com/gjfei/gjfei.github.io.git #设置GH_REF，注意更改yourname
