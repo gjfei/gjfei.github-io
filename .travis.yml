@@ -16,7 +16,7 @@ after_script:
     - git config user.email "149118017.@qq.com" # 修改email
     - git add .
     - git commit -m "Travis CI Auto Builder"
-    - git push --force --quiet "https://${GH_TOKEN}@${blog}" master:master # GH_TOKEN是在Travis中配置token的名称
+    - git push --force --quiet "https://${blog}@${GH_REF}" master:master # GH_TOKEN是在Travis中配置token的名称
 
 branches:
     only:
@@ -25,3 +25,4 @@ branches:
 env:
     global:
         - GH_REF: github.com/gjfei/gjfei.github.io.git #设置GH_REF，注意更改yourname
+        
