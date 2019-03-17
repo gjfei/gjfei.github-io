@@ -30,8 +30,7 @@ category_dir: categories
 code_dir: downloads/code
 i18n_dir: :lang
 skip_render:
-  - "*.html"
-  
+
 # Writing
 new_post_name: :title.md # File name of new posts
 default_layout: post
@@ -83,7 +82,9 @@ theme: next
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repository: git@github.com:gjfei/gjfei.github.io.git
+  repository: 
+    github: git@github.com:gjfei/gjfei.github.io.git
+    aliyun: root@120.78.170.59:/code/web/hexo  ##用户名@域名或 IP 地址:/data/GitLibrary/hexo
   branch: master
   message: hexo deploy
   
