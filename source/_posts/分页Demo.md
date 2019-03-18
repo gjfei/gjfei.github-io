@@ -5,7 +5,7 @@ categories: Demo
 sitmap: Demo
 ---
 jQ实现分页效果
-[分页Demo](../../../Demo/%E5%88%86%E9%A1%B5Demo.html)
+[分页Demo](/Demo/%E5%88%86%E9%A1%B5Demo.html)
 ![](/images/%E5%88%86%E9%A1%B5.png)
     <!--more-->
 ```html
