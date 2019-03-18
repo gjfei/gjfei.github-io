@@ -15,7 +15,7 @@ tags:
 >九、撤销
 >十、其他
 ---
-![](/images/Git_bg2015120901.png)
+![](/images/Git_命令bg2015120901.png)
 <!--more-->
 ```
 *Workspace: 工作区
