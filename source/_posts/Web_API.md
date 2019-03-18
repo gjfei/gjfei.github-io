@@ -38,7 +38,7 @@ API（Application Programming Interface,应用程序编程接口）是一些预�
 
 ### JavaScript的组成
 
-![QQ图片20170810172512](http://plh7kwuq9.bkt.clouddn.com/Web_API_QQ图片20170810172512-2357176615.png)
+![QQ图片20170810172512](../images/Web_API_QQ图片20170810172512-2357176615.png)
 
 #### ECMAScript - JavaScript的核心 
 
@@ -66,7 +66,7 @@ DOM可以把HTML看做是文档树，通过DOM提供的API可以对树上的节�
 
 DOM又称为文档树模型
 
-![1497154623955](http://plh7kwuq9.bkt.clouddn.com/Web_API_1497154623955.png)
+![1497154623955](../images/Web_API_1497154623955.png)
 
 - 文档：一个网页可以称为文档
 - 节点：网页中的所有内容都是节点（标签、属性、文本、注释等）
@@ -347,7 +347,7 @@ body.replaceChild(text, div);
 
 ### 模拟文档树结构
 
-![1497165666684](http://plh7kwuq9.bkt.clouddn.com/Web_API_1497165666684.png)
+![1497165666684](../images/Web_API_1497165666684.png)
 
 ```javascript
 function Node(option) {
@@ -394,7 +394,7 @@ getChildren(doc);
 
 ### 节点层级
 
-![1503541915769](http://plh7kwuq9.bkt.clouddn.com/Web_API_1503541915769.png) 
+![1503541915769](../images/Web_API_1503541915769.png) 
 
 ```javascript
 var box = document.getElementById('box');
@@ -685,7 +685,7 @@ console.log(box.offsetWidth);
 console.log(box.offsetHeight);
 ```
 
-![1498743216279](http://plh7kwuq9.bkt.clouddn.com/Web_API_1498743216279.png)
+![1498743216279](../images/Web_API_1498743216279.png)
 
 ### 客户区大小
 
@@ -697,7 +697,7 @@ console.log(box.clientWidth);
 console.log(box.clientHeight);
 ```
 
-![1504075813134](http://plh7kwuq9.bkt.clouddn.com/Web_API_1504075813134.png)
+![1504075813134](../images/Web_API_1504075813134.png)
 
 ### 滚动偏移
 
@@ -709,7 +709,7 @@ console.log(box.scrollWidth)
 console.log(box.scrollHeight)
 ```
 
-![1498743288621](http://plh7kwuq9.bkt.clouddn.com/Web_API_1498743288621.png)
+![1498743288621](../images/Web_API_1498743288621.png)
 
 ### 案例 
 
@@ -727,4 +727,4 @@ console.log(box.scrollHeight)
 
 ### 元素的类型
 
-![1497169919418](http://plh7kwuq9.bkt.clouddn.com/Web_API_1497169919418.png)
+![1497169919418](../images/Web_API_1497169919418.png)

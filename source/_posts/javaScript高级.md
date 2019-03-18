@@ -14,7 +14,7 @@ sitmap: 笔记
 
 # JavaScript 高级
 
-![](http://plh7kwuq9.bkt.clouddn.com/javaScript高级_Unofficial_JavaScript_logo_2.svg.png)
+![](../images/javaScript高级_Unofficial_JavaScript_logo_2.svg.png)
 ​<!--more-->
 ### 目标
 
@@ -81,7 +81,7 @@ sitmap: 笔记
 
 ### 浏览器是如何工作的
 
- ![img](http://plh7kwuq9.bkt.clouddn.com/javaScript高级_jszxgc.png)
+ ![img](../images/javaScript高级_jszxgc.png)
 
  [参考链接](http://www.2cto.com/kf/201202/118111.html)
 
@@ -116,7 +116,7 @@ JavaScript 运行分为两个阶段：
 
 ## JavaScript 面向对象编程
 
-![](http://plh7kwuq9.bkt.clouddn.com/javaScript高级_mxdxkf.png)
+![](../images/javaScript高级_mxdxkf.png)
 
 ### 面向对象介绍
 
@@ -124,7 +124,7 @@ JavaScript 运行分为两个阶段：
 
 > Everything is object （万物皆对象）
 
-![](http://plh7kwuq9.bkt.clouddn.com/javaScript高级_20160823024542444.jpg)
+![](../images/javaScript高级_20160823024542444.jpg)
 
 对象到底是什么，我们可以从两次层次来理解。
 
@@ -149,7 +149,7 @@ ECMAScript-262 把对象定义为：**无序属性的集合，其属性可以包
 
 > 面向对象不是新的东西，它只是过程式代码的一种高度封装，目的在于提高代码的开发效率和可维 护性。
 
-![](http://plh7kwuq9.bkt.clouddn.com/javaScript高级_664ba37eeee9f4623c06c066867f1d38_r.jpg)
+![](../images/javaScript高级_664ba37eeee9f4623c06c066867f1d38_r.jpg)
 
 面向对象编程 —— Object Oriented Programming，简称 OOP ，是一种编程开发思想。
 它将真实世界各种复杂的关系，抽象为一个个对象，然后由对象之间的分工与合作，完成对真实世界的模拟。
@@ -561,7 +561,7 @@ console.log(p1.sayName === p2.sayName) // => true
 
 #### 构造函数、实例、原型三者之间的关系
 
-![](http://plh7kwuq9.bkt.clouddn.com/javaScript高级_构造函数-实例-原型之间的关系.png)
+![](../images/javaScript高级_构造函数-实例-原型之间的关系.png)
 
 任何函数都具有一个 `prototype` 属性，该属性是一个对象。
 

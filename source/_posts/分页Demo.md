@@ -6,7 +6,7 @@ sitmap: Demo
 ---
 jQ实现分页效果
 [分页Demo](../../../Demo/%E5%88%86%E9%A1%B5Demo.html)
-![](http://plh7kwuq9.bkt.clouddn.com/%E5%88%86%E9%A1%B5.png)
+![](../images/%E5%88%86%E9%A1%B5.png)
     <!--more-->
 ```html
 <!DOCTYPE html>

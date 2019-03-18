@@ -15,7 +15,7 @@ tags:
 >九、撤销
 >十、其他
 ---
-![](http://plh7kwuq9.bkt.clouddn.com/Git%E5%91%BD%E4%BB%A4_bg2015120901.png)
+![](../images/Git%E5%91%BD%E4%BB%A4_bg2015120901.png)
 <!--more-->
 ```
 *Workspace: 工作区
