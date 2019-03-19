@@ -1,0 +1,50 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    -webkit-user-select:none; /* 让文字不可选中 */
+    -moz-user-select:none;
+    -ms-user-select:none;
+    user-select:none;
+}
+#control {
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+#map {
+    width: 700px;
+    height: 700px;
+    background-color: #e4e4e4;
+    position: relative;
+}
+#grade {
+    width: 30px; 
+}
+#add,
+#reduce {
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.snake {
+    width: 20px;
+    height: 20px;
+    background-color: blue;
+    position: absolute;
+    border-radius: 10px;
+    border: 1px solid #999;
+    box-sizing: border-box;
+}
+
+.snake-head {
+    background-color: red;
+}
+.food {
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    position: absolute;
+}
+

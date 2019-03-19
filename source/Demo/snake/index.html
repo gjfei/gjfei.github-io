@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>贪食蛇</title>
+        <link rel="stylesheet" href="css/index.css">
+    </head>
+    <body>
+        <!-- 蛇的地图 -->
+        <div id="map">
+            <div class="snake"></div>
+            <div class="snake"></div>
+            <div class="snake snake-head"></div>
+            <div class="food"></div>
+        </div>
+        <div id="control">
+            最高分:&nbsp;<input type="text" id="maxIntegral" readonly value="0">
+            <br>
+            积分:&nbsp;<input type="text" id="integral" value="0"readonly>
+            <br>
+            等级:&nbsp;
+            <!-- <a id="reduce">-</a> -->
+            <input type="number" id="grade" min="1" max="9" value="5"> 
+            <!-- <a id="add">+</a> -->
+            <br>
+            <!-- <button id="suspend">暂停</button>  -->
+            请用&larr;,&uarr;,&rarr;,&darr;,控制方向
+            <br>
+            0-9控制等级
+            <br>
+            按空格暂停游戏
+            <br>
+           
+        </div>
+        <script src="js/index.js"></script>
+    </body>
+</html>
