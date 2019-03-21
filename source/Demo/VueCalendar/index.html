@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./lib/iconfont.css">
+    <link rel="stylesheet" href="./lib/calendar.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="calendar-wrapper">
+            <div class="year-month">
+                <i class="iconfont icon-shuangjiantouzuo" id="last-year" @click="lastYear"></i>
+                <i class="iconfont icon-shangyiyedanjiantou" id="last-month" @click="lastMonth"></i>
+                <span id="year">{{ year }}年</span>
+                <span id="month">{{ month+1 }}月</span>
+                <i class="iconfont icon-xiayiyedanjiantou" id="next-month" @click="nextMonth"></i>
+                <i class="iconfont icon-shuangjiantouyou" id="next-year" @click="nextYear"></i>
+            </div>
+            <ul class="weeks">
+                <li>日</li>
+                <li>一</li>
+                <li>二</li>
+                <li>三</li>
+                <li>四</li>
+                <li>五</li>
+                <li>六</li>
+            </ul>
+            <ul class="days">
+                <li v-for="(item,index) in dayArry" :class="addColor(index)" >{{ item }}</li>
+            </ul>
+        </div>
+    </div>
+    <script src="./lib/vue-2.4.0.js"></script>
+    <script>
+       var vm=new Vue({
+            el:'#app',
+            data: {
+                date:new Date(),
+                year:'',
+                month:'',
+                monthArry:[31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31],
+                day:'',
+                dayArry:[],
+                week:'',
+                today:{
+                    year:'',
+                    month:'',
+                    day:'',
+                },
+                thisMonthFirst:'',
+                thisMonthlast:'',
+                // istoday:'istoday',
+                // thisMonth:'this-month',
+            },
+            created() { 
+                this.init();
+            },
+            computed:{
+                
+            },
+            methods: {
+                init(){
+                    this.year = this.date.getFullYear();
+                    this.month = this.date.getMonth();
+                    this.day = this.date.getDate()
+                    this.week = this.date.getDay();
+                    if(this.today.year==''){
+                        this.today.year = this.date.getFullYear();
+                        this.today.month = this.date.getMonth();
+                    }
+                    // 判断闰年
+                    if(this.year % 4 == 0 && this.year % 100 !=0 || this.year % 400 ==0){
+                        this.monthArry[1]=29;
+                    }
+                    if(this.firstDay()===0){
+                        this.thisMonthFirst=0;
+                        this.dayArry = [];
+                        // 本月
+                        for(let i = 1;i<=this.monthArry[this.month];i++){
+                            this.dayArry.push(i);
+                            if(this.today.day==''&&i==this.date.getDate()){
+                                this.today.day=this.dayArry.length;
+                            }
+                        }
+                        this.thisMonthlast=this.dayArry.length-1;
+                        // 后面补齐
+                        for(let i = 1;i<=42-this.monthArry[this.month];i++){
+                            this.dayArry.push[i];
+                        }
+                    }else{
+                        this.dayArry = [];
+                        var backwards = this.monthArry[this.month-1] || this.monthArry[this.monthArry.length-1];
+                        // 前面补齐
+                        for(let i=1;i<this.firstDay();i++){
+                            this.dayArry.unshift(backwards);
+                            backwards--;
+                        }
+                        // 本月
+                        this.thisMonthFirst=this.dayArry.length;
+                        for(let i = 1;i <= this.monthArry[this.month];i++){
+                            this.dayArry.push(i);  
+                            if(this.today.day==''&&i==this.date.getDate()){
+                                this.today.day=this.dayArry.length;
+                            }
+                        }
+                        this.thisMonthlast=this.dayArry.length-1;
+                        // 后面补齐
+                        for (let i=1; this.dayArry.length <42; i++) {
+                            this.dayArry.push(i); 
+                        }
+                    }
+                },
+                firstDay(){
+                    result = this.week-(this.day%7-1);
+                    count = result<0?7+result:result;
+                    return count;
+                },
+                addColor(index) {
+                    return {
+                        istoday:this.year==this.today.year&&this.month==this.today.month&&index==this.today.day,
+                        thisMonth:index>=this.thisMonthFirst&&index<=this.thisMonthlast,
+                    }
+                },
+                lastYear(){
+                    this.date.setFullYear(this.date.getFullYear()-1);
+                    this.init();
+                },
+                nextYear(){
+                    this.date.setFullYear(this.date.getFullYear()+1);
+                    this.init();
+                },
+                lastMonth(){
+                    if(this.month===0){
+                        this.date.setMonth(11);
+                        this.date.setFullYear(this.date.getFullYear()-1);
+                        this.init();
+                    }else{
+                        this.date.setMonth(this.date.getMonth()-1)
+                        this.init();
+                    }
+                },
+                nextMonth(){
+                    if(this.month===11){
+                        this.date.setMonth(0);
+                        this.date.setFullYear(this.date.getFullYear()+1);
+                        this.init();
+                    }else{
+                        this.date.setMonth(this.date.getMonth()+1)
+                        this.init();
+                    }
+                }
+            },
+        });
+    </script>
+</body>
+
+</html>
